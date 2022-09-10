@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- fontawesome -->
+<script src="https://kit.fontawesome.com/04004e89ec.js" crossorigin="anonymous"></script>
+
+<!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+    <div class="box" id="heading">
+
+        <h1> <%= KindOfDay %> </h>
+
+    </div>
+    
+
+    <div class="box" id="test">
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="Add new Tasks" autocomplete="off">
+            
+            <button type="submit" name="button" class="add">+</button>
+        </form>
+        
+            <% for(var i=0 ; i<newlistitems.length ; i++) { %>
+                <div class="item" id="task-list">
+                <input type="checkbox">
+                <p> <%= newlistitems[i] %></p>
+            </div>
+            <% } %>
+        </div>
+
+        <script src="js/main.js"></script>
+
+</body>
+</html>
