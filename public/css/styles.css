@@ -94,4 +94,21 @@ html {
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
   }
-  
+
+  @media (max-width : 550px)
+{
+  .box {
+    max-width: 400px;
+    margin: 50px 10%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .item {
+    width: 70%;
+  } 
+
+}
+
+
