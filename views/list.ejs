@@ -22,20 +22,29 @@
     </div>
     
 
-    <div class="box">
+    <div class="box" id="test">
+
         <form class="item" action="/" method="post">
-            <input type="text" class="form-input" name="newItem" placeholder="Add new Tasks" autocomplete="off">
+            <input type="text" name="newItem" placeholder="Add new Tasks" autocomplete="off">
             
             <button type="submit" name="button" class="add">+</button>
         </form>
         
-            <% for(var i=0 ; i<newlistitems.length ; i++) { %>
+        <form action="/delete" method="post">
+            
+            <% newlistitems.forEach(function(item){ %>
                 <div class="item" id="task-list">
-                <input type="checkbox">
-                <p> <%= newlistitems[i] %></p>
-            </div>
-            <% } %>
-        </div>
+                    <input type="checkbox" name="check" value="<%= item._id%>" onchange="this.form.submit()">
+                    <p> <%= item.name%> </p>
+                </div>
+            <% }) %>
+                
+        </form>
+
+
+        
+           
+    </div>
 
         <script src="js/main.js"></script>
 
